@@ -71,7 +71,7 @@ body {
     height: 52rem;
     width: 28rem;
     top: -362px;
-    left: -263px;
+    right: 50vw;
     z-index: -1;
 }
 
@@ -347,14 +347,14 @@ main {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media (min-width: 768px) {
-    
-}
-
 @media (min-width: 992px) {
     main {
         flex-direction: row;
-        margin: 10%;
+        margin: -2% 10%;
+    }
+
+    .left-background {
+        right: 72vw;
     }
 
     .phone {
@@ -381,11 +381,10 @@ main {
 @media (min-width: 1200px) {
     .left-background {
         top: -195px;
-        left: -121px;
+        left: 0vw;
     }
 
     main {
-        flex-direction: row;
-        margin: 10% 15%;
+        margin: 0% 15%;
     }
 }
