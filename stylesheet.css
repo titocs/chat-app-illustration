@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+/* font-family: 'Rubik', sans-serif; */
+
+:root {
+    /* Text */
+    --Pale-Violet: rgb(216, 158, 255); /* (sub-heading at the top of the app UI) */
+    --Moderate-Violet: hsl(276, 55%, 52%); /* (chat on the left) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%); /* (chat on the right) */
+    --Grayish-Blue: hsl(206, 6%, 79%); /* (placeholder text) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (main heading) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%); /* (paragraph) */
+
+    /* Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%); /* (app background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (submit button background) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%); /* (radio button outline) */
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    line-height: 1;
+    box-sizing: border-box;
+    background-color: var(--Light-Grayish-Violet);
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    /* background-image: url(images/group1.svg), url(images/group2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 424px, 430px;
+    background-position: -242px -351px, 185px 482px; */
+}
+
+.left-background {
+    position: absolute;
+    background: linear-gradient(to top, var(--Light-Violet), var(--Light-Magenta));
+    border-radius: 0px 0px 220px 220px;
+    height: 52rem;
+    width: 28rem;
+    top: -362px;
+    left: -263px;
+    z-index: -1;
+}
+
+.right-background {
+    position: absolute;
+    background-color: rgb(242 222 255);
+    width: 21rem;
+    height: 28rem;
+    border-radius: 220px 220px 0px 0px;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: -1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 9%;
+    padding-top: 16%;
+    padding-bottom: 16%;
+}
+
+.phone {
+    position: relative;
+    border-radius: 30px;
+    border: 10px solid white;
+    background-color: var(--Light-Grayish-Violet);
+    width: 240px;
+    height: 515px;
+    margin: auto;
+    margin-bottom: 74px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 20px 41px -14px rgba(0,0,0,0.52);
+    box-shadow: 0px 20px 41px -14px rgba(0,0,0,0.52);
+}
+
+.arrow {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 7px;
+    margin-left: 15px;
+}
+
+.arrowProfil {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+}
+
+.pony {
+    width: 135px;
+    height: 20px;
+    background-color: white;
+    border-radius: 0px 0px 15px 15px;
+    margin: auto;
+    margin-bottom: 11px;
+}
+
+.profil {
+    background: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+    height: 73px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.profil-wrapper {
+    display: flex;
+}
+
+.profil-description {
+    display: flex;
+}
+
+.profil-description > img {
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.three-dots {
+    transform: rotate(90deg);
+    font-size: 16px;
+    color: white;
+}
+
+.contact-name {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 70px;
+}
+.contact-name > h1 {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-name > p {
+    font-size: 9px;
+    opacity: 0.5;
+    color: white;
+    font-weight: 400;
+}
+
+.chat-content {
+    padding: 12px 9px;
+}
+
+.chat {
+    font-size: 9px;
+    width: 125px;
+    padding: 8px;
+    background-color: hsl(276deg 100% 81% / 25%);
+    margin-bottom: 8px;
+    color: var(--Moderate-Violet);
+    border-radius: 13px 13px 13px 3px;
+}
+
+.chat > p {
+    line-height: 12px;
+}
+
+.image-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.image-wrapper > img {
+    width: 42px;
+    border-radius: 10px;
+}
+
+.right-chat-1 {
+    padding: 8px;
+    font-size: 9px;
+    margin-bottom: 8px;
+    border-radius: 13px 13px 3px 13px;
+    background-color: white;
+    margin-left: auto;
+    width: 125px;
+    -webkit-box-shadow: 0px 8px 17px -12px rgba(0,0,0,0.39); 
+    box-shadow: 0px 8px 17px -12px rgba(0,0,0,0.39);
+}
+
+.right-chat-2 {
+    padding: 8px;
+    font-size: 9px;
+    border-radius: 13px 13px 3px 13px;
+    background-color: white;
+    margin-left: auto;
+    width: 73px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 8px 17px -12px rgba(0,0,0,0.39); 
+    box-shadow: 0px 8px 17px -12px rgba(0,0,0,0.39);
+}
+
+.right-chat-1 > p,
+.right-chat-2 > p {
+    line-height: 12px;
+}
+
+.gradient-chat {
+    display: flex;
+    background: linear-gradient(to left, var(--Light-Violet), var(--Light-Magenta));
+    margin-bottom: 8px;
+    padding: 8px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 10px 3px;
+    width: 150px;
+}
+
+.gradient-chat > p {
+    color: white;
+    font-size: 8px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.gradient-chat > h1 {
+    margin-left: auto;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.message {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    height: 25px;
+    padding: 5px;
+}
+
+.message > p {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+    padding-left: 20px;
+}
+
+.button-send {
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    margin-left: auto;
+    width: 27px;
+    border-radius: 16px;
+}
+
+.arrow-send {
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.arrowSend {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+.pharagraph > h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.pharagraph > p {
+    color: var(--Dark-Grayish-Violet);
+    text-align: center;
+    line-height: 25px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 992px) {
+    main {
+        flex-direction: row;
+        margin: 10%;
+    }
+
+    .phone {
+        margin-bottom: 0;
+    }
+
+    .phone-section {
+        padding: 5%;
+    }
+
+    .pharagraph {
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pharagraph > h1,
+    .pharagraph > p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .left-background {
+        top: -195px;
+        left: -121px;
+    }
+
+    main {
+        flex-direction: row;
+        margin: 10% 15%;
+    }
+}
